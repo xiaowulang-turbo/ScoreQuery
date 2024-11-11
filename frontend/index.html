@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>四六级成绩查询系统</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div id="app">
+            <h1>四六级成绩查询</h1>
+            <div>
+                <input v-model="examId" placeholder="请输入准考证号" />
+                <input v-model="name" placeholder="请输入姓名" />
+                <button @click="queryScore">查询</button>
+            </div>
+            <div v-if="result">
+                <h2>查询结果</h2>
+                <p>姓名: {{ result.name }}</p>
+                <p>准考证号: {{ result.exam_id }}</p>
+                <p>成绩: {{ result.score }}</p>
+                <p>级别: {{ result.level }}</p>
+            </div>
+            <p v-if="error">{{ error }}</p>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
