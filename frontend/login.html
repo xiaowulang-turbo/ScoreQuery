@@ -7,19 +7,19 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <div id="app">
-            <div class="login" v-if="!isLogin">
+        <div id="app-1">
+            <div class="login">
                 <h1>登录</h1>
                 <form @submit.prevent="login">
-                    <input type="text" v-model="username" placeholder="用户名" />
+                    <input type="text" v-model="examId" placeholder="用户名" />
                     <input type="password" v-model="password" placeholder="密码" />
-                    <button type="submit">登录</button>
+                    <button type="submit" @click="login" >登录</button>
                 </form>
-                <p>没有账号？<a href="#" @click="isLogin = true">注册</a></p>
+                <p>没有账号？<a href="#">注册</a></p>
             </div>
             <div class="register" v-else>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-        <!-- <script src="app.js"></script> -->
+        <script src="app-1.js"></script>
     </body>
 </html>

@@ -38,6 +38,20 @@ app.post("/api/query", async (req, res) => {
     }
 })
 
+// 登录
+app.post("/api/login", async (req, res) => {
+    const { username, password } = req.body
+    try {
+        if (username === "admin" && password === "admin") {
+            res.json({ message: "登录成功" })
+        } else {
+            res.status(401).json({ message: "用户名或密码错误" })
+        }
+    } catch (error) {
+        res.status(500).json({ message: "登录失败", error })
+    }
+})
+
 app.listen(PORT, () => {
     console.log(`服务器运行在 http://localhost:${PORT}`)
 })
