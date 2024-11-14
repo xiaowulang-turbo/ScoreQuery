@@ -1,0 +1,23 @@
+[
+    {
+        "exam_id": 135027015401,
+        "name": "张三",
+        "password": "password1",
+        "score": 552,
+        "level": "cet-4"
+    },
+    {
+        "exam_id": 135027015402,
+        "name": "李四",
+        "password": "password2",
+        "score": 580,
+        "level": "cet-4"
+    },
+    {
+        "exam_id": 135027015403,
+        "name": "王五",
+        "password": "password3",
+        "score": 610,
+        "level": "cet-4"
+    }
+]
