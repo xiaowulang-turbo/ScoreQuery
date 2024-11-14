@@ -40,10 +40,13 @@ app.post("/api/query", async (req, res) => {
 
 // 登录
 app.post("/api/login", async (req, res) => {
-    const { username, password } = req.body
+    const { exam_id, password } = req.body
+    console.log(exam_id, password)
     try {
-        if (username === "admin" && password === "admin") {
+        if (exam_id === "admin" && password === "admin") {
+            // if (1) {
             res.json({ message: "登录成功" })
+            // }
         } else {
             res.status(401).json({ message: "用户名或密码错误" })
         }

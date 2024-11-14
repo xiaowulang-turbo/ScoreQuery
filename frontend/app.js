@@ -3,6 +3,7 @@ new Vue({
     data: {
         examId: "",
         name: "",
+        password: "",
         result: null,
         error: "",
     },
@@ -47,7 +48,7 @@ new Vue({
                         },
                         body: JSON.stringify({
                             exam_id: this.examId,
-                            name: this.name,
+                            password: this.password,
                         }),
                     }
                 )
