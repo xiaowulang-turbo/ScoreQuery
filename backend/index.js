@@ -43,7 +43,8 @@ app.post("/api/login", async (req, res) => {
     const { exam_id, password } = req.body
     console.log(exam_id, password)
     try {
-        if (exam_id === "admin" && password === "admin") {
+        const user = await Score.findOne({ exam_id, password })
+        if (user) {
             // if (1) {
             res.json({ message: "登录成功" })
             // }
